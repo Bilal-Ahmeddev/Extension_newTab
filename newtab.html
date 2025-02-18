@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Tab</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            color: #fff;
+            font-size: 20px;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .info {
+            margin: 10px 0;
+            font-size: 22px;
+        }
+
+        .quote {
+            font-style: italic;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Live Stats</h2>
+        <div class="info">Age: <span id="age"></span></div>
+        <div class="info">Current Time: <span id="currentTime"></span></div>
+        <div class="info">Browser Usage: <span id="usage"></span></div>
+        <div class="quote" id="quote"></div>
+    </div>
+
+    <script src="newtab.js"></script>
+</body>
+</html>
