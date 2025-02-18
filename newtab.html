@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Tab</title>
+    <!-- Favicon for the browser tab -->
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/42/Google_2015_logo.svg" type="image/svg+xml">
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
@@ -40,11 +43,32 @@
             margin-top: 20px;
             color: #ffcc00;
         }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .header img {
+            margin-right: 10px; /* Space between logo and title */
+            width: 30px; /* Adjust logo size */
+            height: auto;
+        }
+
+        .header h2 {
+            font-size: 30px;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Live Stats</h2>
+        <div class="header">
+            
+            <h2>Live Stats</h2>
+        </div>
         <div class="info">Age: <span id="age"></span></div>
         <div class="info">Current Time: <span id="currentTime"></span></div>
         <div class="info">Browser Usage: <span id="usage"></span></div>
