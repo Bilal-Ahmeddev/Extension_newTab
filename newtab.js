@@ -11,6 +11,16 @@ const quotes = [
     "Success is what happens after you survive your mistakes."
 ];
 
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("searchInput").focus();
+});
+
+
+function submitOnEnter(event) {
+    if (event.key === "Enter") {
+        document.getElementById("googleSearchForm").submit();
+    }
+}
 
 function updateLiveAge() {
     const birthDate = new Date("1999-10-17T00:00:00Z");

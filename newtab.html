@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Tab</title>
     <!-- Favicon for the browser tab -->
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/42/Google_2015_logo.svg" type="image/svg+xml">
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=xMV4V1pU5UhT&format=png&color=000000" type="image/svg+xml">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
@@ -18,23 +18,93 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
             background: url('https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
             color: #fff;
             font-size: 20px;
-            margin: 0;
             overflow: hidden;
+            background-position: center;
+            transition: background 1.5s ease-in-out;
         }
 
         .container {
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            border-radius: 10px;
+            backdrop-filter: blur(12px);
+            padding: 30px;
+            border-radius: 15px;
             background: rgba(0, 0, 0, 0.6);
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .header {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin: 10px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .header img {
+            width: 50px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .search-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .search-box input[type="text"] {
+            padding: 15px 20px;
+            font-size: 18px;
+            width: 100%;
+            max-width: 350px;
+            border-radius: 25px;
+            border: 2px solid #fff;
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            transition: 0.3s ease;
+        }
+
+        .search-box input[type="text"]:focus {
+            background-color: rgba(255, 255, 255, 0.4);
+            border-color: #4285f4;
+            box-shadow: 0 0 10px rgba(66, 133, 244, 0.7);
+        }
+
+        .search-box button {
+            padding: 12px 25px;
+            background-color: #4285f4;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        .search-box button:hover {
+            background-color: #357ae8;
         }
 
         .info {
-            margin: 10px 0;
             font-size: 22px;
+            margin: 15px 0;
         }
 
         .quote {
@@ -42,38 +112,41 @@
             font-size: 18px;
             margin-top: 20px;
             color: #ffcc00;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
         }
 
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
+        @media (max-width: 600px) {
+            .search-box input[type="text"] {
+                width: 80%;
+            }
 
-        .header img {
-            margin-right: 10px; /* Space between logo and title */
-            width: 30px; /* Adjust logo size */
-            height: auto;
-        }
-
-        .header h2 {
-            font-size: 30px;
-            margin: 0;
+            .container {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            
             <h2>Live Stats</h2>
         </div>
+        
+        <div class="search-box">
+            
+            <form action="https://www.google.com/search" method="get"  id="googleSearchForm">
+                <input type="text" name="q" placeholder="Search..." id="searchInput" onkeypress="submitOnEnter(event)">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
         <div class="info">Age: <span id="age"></span></div>
         <div class="info">Current Time: <span id="currentTime"></span></div>
         <div class="info">Browser Usage: <span id="usage"></span></div>
         <div class="quote" id="quote"></div>
     </div>
+
+    
 
     <script src="newtab.js"></script>
 </body>
