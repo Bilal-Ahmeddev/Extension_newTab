@@ -2,6 +2,14 @@ Chrome Extension: Live Age & Browser Time Tracker
 
 This Chrome extension tracks your live age in years, days, and seconds, displays the current time in 12-hour format (HH:MM:SS AM/PM), and calculates the total time spent on the browser. Every time a new tab is opened, it shows an aesthetic background with motivational quotes.
 
+
+🎨 Screenshots
+
+
+🚀 ![image](![image](https://github.com/user-attachments/assets/dd74ee92-77f5-4610-b046-b30ffc94b0e3)
+
+
+
 Features
 
 📅 Live Age Tracker: Displays your exact age in years, days, and seconds, updating every second.
