@@ -5,7 +5,7 @@
     "description": "Displays live age, time, and browser usage whenever a new tab is opened",
     "permissions": ["storage"],
     "chrome_url_overrides": {
-      "newtab": "newtab.html"
+      "newtab": "index.html"
     },
     "background": {
       "service_worker": "background.js"
